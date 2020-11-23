@@ -1,4 +1,4 @@
-import { createRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import io from "socket.io-client";
 
 type Payload = {
@@ -99,7 +99,7 @@ const Room = () => {
 
   function handleReceiveCall(payload: Payload) {
     console.log(`offer: ${JSON.stringify(payload)}`);
-    peerRef.current = createPeer();
+    peerRef.current = createPeer(null);
     const desc = new RTCSessionDescription(payload.sdp);
     peerRef.current
       .setRemoteDescription(desc)
