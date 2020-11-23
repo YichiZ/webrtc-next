@@ -21,7 +21,9 @@ const Room = () => {
     navigator.mediaDevices
       .getUserMedia({ audio: false, video: true })
       .then((stream) => {
-        socketRef.current = io.connect("http://localhost:8000");
+        socketRef.current = io.connect(
+          "https://webrtc-next.azurewebsites.net/"
+        );
         if (userVideo.current) {
           userVideo.current.srcObject = stream;
         }

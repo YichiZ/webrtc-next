@@ -2,5 +2,7 @@
   "appService.zipIgnorePattern": [
     "node_modules{,/**}",
     ".vscode{,/**}"
-  ]
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/da66b4a3-c7fd-4fba-b0e6-6fd645bce4ff/resourceGroups/Webrtc-next/providers/Microsoft.Web/sites/webrtc-next",
+  "appService.deploySubpath": "server"
 }
